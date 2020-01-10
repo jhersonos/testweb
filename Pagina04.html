@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Semana 06 : Ejemplo 02</title>
+<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.accordion.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="jQueryAssets/jquery.ui.tabs.min.css">
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<script src="jQueryAssets/jquery.ui-1.10.4.accordion.min.js"></script>
+<script type="text/javascript" src="jQueryAssets/jquery.ui-1.10.4.tabs.min.js"></script>
+</head>
+<body>
+  <header>
+     <h1 style="background:black;color: white; padding:0;margin:0;text-align:center">CLASES DE ANIMALES</h1>
+  </header>
+<div id="Accordion1">
+  <h3><a href="#">MARINOS</a></h3>
+  <div>
+    <p>Se denominan animales marinos a todos aquellos animales que viven en las aguas del mar, toda su vida o al menos gran parte de ella.</p>
+  </div>
+  <h3><a href="#">REPTILES</a></h3>
+  <div>
+    <p> es un animal vertebrado que carece de patas o que las tiene muy cortas, por lo que, al caminar, roza el suelo con su vientre. Se trata de animales que pueden ser ovíparos u ovovivíparos y que presentan una temperatura variable.</p>
+  </div>
+  <h3><a href="#">MAMIFEROS</a></h3>
+  <div>
+    <p>son una clase de vertebrados amniotas homeotermos (de «sangre caliente») que poseen glándulas mamarias productoras de leche con las que alimentan a las crías. La mayoría son vivíparos (con la excepción de los monotremas: ornitorrinco y equidnas).</p>
+  </div>
+  <h3><a href="#">ANFIBIOS</a></h3>
+  <div>
+	<p>es el animal que puede vivir tanto en tierra como sumergido en el agua. Los sapos y las ranas, por ejemplo, son animales anfibios ya que, de jóvenes, tienen branquias y viven en el agua; sin embargo, de adultos, desarrollan pulmones y pasan a vivir en la tierra.</p>	
+  </div>
+</div>
+<span id="titulo" > </span>
+<br>
+<button id="boton"> </button>
+
+<br>
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Nunc tincidunt</a></li>
+    <li><a href="#tabs-2">Proin dolor</a></li>
+    <li><a href="#tabs-3">Aenean lacinia</a></li>
+  </ul>
+  <div id="tabs-1">
+    <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+  </div>
+  <div id="tabs-2">
+    <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+  </div>
+  <div id="tabs-3">
+    <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+    <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+  </div>
+</div>
+<script type="text/javascript">
+
+  /* tabs */
+
+  /**/
+
+  $(function() {
+  //$( "#Accordion1" ).accordion(); 
+  
+  var icons = { header: "ui-icon-circle-arrow-e", 
+          activeHeader: "ui-icon-circle-arrow-s"
+        };
+  $("#Accordion1").accordion({
+                  collapsible : true,
+                  icons : icons,
+                  active : 2 
+                 });  
+  });
+
+
+  //document.getElementById("titulo").innerHTML = 'sin JQuery';
+  $("#titulo").html('con JQuery');
+  
+  $(function(){
+      $("button#boton").html('Saludar');
+    }
+  );
+  
+
+  $("button#boton").on("click", function (event){
+    $("#titulo").html('BIENVENIDOS A MI PÁGINA!');
+    $("#titulo").css('color', 'red');
+    $("#titulo").css({"color":'red', "font-size":"150%"});
+    $(this).hide(); //show()
+  });
+
+  $("#tabs").tabs();
+  
+</script>
+</body>
+</html>

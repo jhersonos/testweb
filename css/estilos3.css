@@ -1,0 +1,86 @@
+/* CSS Document */ 
+body{
+	margin: 0;
+}
+img{
+	max-width: 100%;
+}
+*{
+	box-sizing: border-box;
+}
+
+header{
+	background:black;
+	color:white;
+	margin:0;
+	padding:15px; 
+}
+h1{
+	text-align: center;
+}
+figure{
+		border:thin #c0c0c0 solid;
+		padding:5px;
+		margin:auto;
+		width: fit-content;
+		max-width: 450px;
+	}
+figcaption{
+		background-color:#222;
+		color:#fff;
+		font:italic smaller sans-serif;
+		padding:3px;
+		text-align: center;
+}
+img,img:hover
+{ 
+	transition:all 2s ease-in-out;
+}
+.manatii
+{
+content:url(../img/manatii.jpg)
+
+}
+.ballena{
+    content:url(../img/ballena.jpg);
+	/*max-width: 190px;
+	max-height: 190px;*/
+}
+.foca1{
+	content:url(../img/foca1.jpg);
+}
+.pez{
+	content:url(../img/pez.jpg);
+}
+img.imagen01:hover{
+	filter:blur(5px);
+}
+
+img.imagen02:hover{
+	filter:grayscale(130%);
+}
+img.imagen03:hover{
+	filter:sepia(60%);
+}
+img.imagen04:hover{
+filter:hue-rotate(180deg);
+
+}
+
+.flex{
+	margin:auto;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.container{
+	max-width: 85%;
+	margin:auto;
+}
+
+.primero{
+	width: 100%
+}
+.segundo{
+	width: 100%
+}
